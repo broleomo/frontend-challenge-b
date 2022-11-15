@@ -1,8 +1,13 @@
+import Container from './components/Container/Container';
+import JobList from './components/JobList/JobList';
+import data from './data';
+
 function App() {
+  console.log(data);
   return (
-    <div>
-      <header>Hello</header>
-    </div>
+    <Container>
+      <JobList jobs={data}/>
+    </Container>
   );
 }
 
