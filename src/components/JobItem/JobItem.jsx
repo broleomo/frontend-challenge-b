@@ -1,8 +1,7 @@
 import React from 'react';
 import {Card, JobImage, JobInfoContainer, JobTitle, JobTitleContainer, JobTag, JobPostInfo, CompanyTitle, JobDescriptionTagContainer, JobDescriptor, JobTags} from './JobItem.styles';
 
-const JobItem= ({company, image, title, datePosted, contract, location, descriptors, featured, newJob, role, level, languages, tools }) => {
-  console.log(image);
+const JobItem= ({company, image, title, datePosted, contract, location, featured, newJob, role, level, languages, tools }) => {
   return (
     <>
       <Card featured={featured}>
