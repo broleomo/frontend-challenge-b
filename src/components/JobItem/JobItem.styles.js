@@ -3,11 +3,13 @@ import styled from 'styled-components';
 const Card = styled.div`
   background-color: white;
   display: flex;
-  margin: 25px;
+  margin: 10px;
   padding: 30px;
   border-radius: 5px;
   font-family: 'League Spartan', sans-serif;
   justify-content: center;
+  box-shadow: 0px 0px 17px hsl(180deg 29% 50%);
+  border-left: ${props => props.featured ? "5px solid hsl(180, 29%, 50%)" : "white"};
 `
 
 const JobInfoContainer = styled.div`
@@ -31,13 +33,15 @@ const JobTitleContainer = styled.div`
 `
 
 const JobTag = styled.div`
-  font-size: 14px;
-  background-color: gray;
+  font-size: 12px;
+  background-color: ${props => props.featured ? "hsl(180, 14%, 20%)" : "hsl(180, 29%, 50%)"};
   border-radius: 25px;
   color: white;
   padding: 5px;
   margin: 0 5px;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
 `
 
 const JobImage = styled.img`
@@ -63,12 +67,15 @@ const JobDescriptionTagContainer = styled.div`
   justify-content: space-around;
 `
 
-const JobDescriptor = styled.div`
+const JobDescriptor = styled.button`
+  font-family: 'League Spartan', sans-serif;
   color: hsl(180, 29%, 50%);
   padding: 5px;
   border-radius: 5px;
   background-color: hsl(180, 52%, 96%);
   margin: 0 5px;
+  border: 0;
+  cursor: pointer;
 `
 
 const JobTags = styled.div`

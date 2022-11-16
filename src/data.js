@@ -1,8 +1,18 @@
+import photosnap from './images/photosnap.svg';
+import manage from './images/manage.svg';
+import account from './images/account.svg';
+import myHome from './images/myhome.svg';
+import loopStudios from "./images/loop-studios.svg";
+import faceIt from "./images/faceit.svg";
+import shortly from "./images/shortly.svg";
+import insure from "./images/insure.svg";
+import eyecam from "./images/eyecam-co.svg";
+import airFilter from "./images/the-air-filter-company.svg";
 const data = [
   {
     "id": 1,
     "company": "Photosnap",
-    "logo": "./images/photosnap.svg",
+    "logo": photosnap,
     "new": true,
     "featured": true,
     "position": "Senior Frontend Developer",
@@ -17,7 +27,7 @@ const data = [
   {
     "id": 2,
     "company": "Manage",
-    "logo": "./images/manage.svg",
+    "logo": manage,
     "new": true,
     "featured": true,
     "position": "Fullstack Developer",
@@ -32,7 +42,7 @@ const data = [
   {
     "id": 3,
     "company": "Account",
-    "logo": "./images/account.svg",
+    "logo": account,
     "new": true,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -47,7 +57,7 @@ const data = [
   {
     "id": 4,
     "company": "MyHome",
-    "logo": "./images/myhome.svg",
+    "logo": myHome,
     "new": false,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -62,7 +72,7 @@ const data = [
   {
     "id": 5,
     "company": "Loop Studios",
-    "logo": "./images/loop-studios.svg",
+    "logo": loopStudios,
     "new": false,
     "featured": false,
     "position": "Software Engineer",
@@ -77,7 +87,7 @@ const data = [
   {
     "id": 6,
     "company": "FaceIt",
-    "logo": "./images/faceit.svg",
+    "logo": faceIt,
     "new": false,
     "featured": false,
     "position": "Junior Backend Developer",
@@ -92,7 +102,7 @@ const data = [
   {
     "id": 7,
     "company": "Shortly",
-    "logo": "./images/shortly.svg",
+    "logo": shortly,
     "new": false,
     "featured": false,
     "position": "Junior Developer",
@@ -107,7 +117,7 @@ const data = [
   {
     "id": 8,
     "company": "Insure",
-    "logo": "./images/insure.svg",
+    "logo": insure,
     "new": false,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -122,7 +132,7 @@ const data = [
   {
     "id": 9,
     "company": "Eyecam Co.",
-    "logo": "./images/eyecam-co.svg",
+    "logo": eyecam,
     "new": false,
     "featured": false,
     "position": "Full Stack Engineer",
@@ -137,7 +147,7 @@ const data = [
   {
     "id": 10,
     "company": "The Air Filter Company",
-    "logo": "./images/the-air-filter-company.svg",
+    "logo": airFilter,
     "new": false,
     "featured": false,
     "position": "Front-end Dev",

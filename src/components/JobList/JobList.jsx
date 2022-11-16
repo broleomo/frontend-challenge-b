@@ -15,6 +15,12 @@ const JobList = ({jobs}) => {
         contract={job.contract} 
         location={job.location} 
         descriptors={['here', 'are', 'some', 'descriptors']}
+        newJob={job.new}
+        featured={job.featured}
+        role={job.role}
+        level={job.level}
+        languages={job.languages}
+        tools={job.tools}
       />
     ))}
     </ListContainer>
