@@ -23,28 +23,28 @@ const JobList = ({jobs}) => {
 
   return (
     <Wrapper>
-    {filters?.length > 0 && <FilterBar filters={filters} removeFilter={removeFilter} clearFilters={() => setFilters([])} />}
-    <ListContainer>
-    {filteredJobs.map((job) => (
-      <JobItem
-        key={job.id}
-        company={job.company} 
-        image={job.logo}
-        title={job.position} 
-        datePosted={job.postedAt}
-        contract={job.contract} 
-        location={job.location} 
-        newJob={job.new}
-        featured={job.featured}
-        role={job.role}
-        level={job.level}
-        languages={job.languages}
-        tools={job.tools}
-        addFilter={addFilter}
-        descriptors={job.descriptors}
-      />
-    ))}
-    </ListContainer>
+      {filters?.length > 0 && <FilterBar filters={filters} removeFilter={removeFilter} clearFilters={() => setFilters([])} />}
+      <ListContainer>
+      {filteredJobs.map((job) => (
+        <JobItem
+          key={job.id}
+          company={job.company} 
+          image={job.logo}
+          title={job.position} 
+          datePosted={job.postedAt}
+          contract={job.contract} 
+          location={job.location} 
+          newJob={job.new}
+          featured={job.featured}
+          role={job.role}
+          level={job.level}
+          languages={job.languages}
+          tools={job.tools}
+          addFilter={addFilter}
+          descriptors={job.descriptors}
+        />
+      ))}
+      </ListContainer>
     </Wrapper>
 )}
 

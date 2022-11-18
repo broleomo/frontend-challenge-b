@@ -6,10 +6,10 @@ const FiltersContainer = styled.div`
   font-family: 'League Spartan', sans-serif;
   justify-content: space-between;
   min-width: 900px;
-  padding: 20px;
+  padding: 20px 30px;
   border-radius: 5px;
-  position: relative;
-  bottom: 35px;
+  position: absolute;
+  top: 156px;
   box-shadow: 0px 0px 17px hsl(180deg 29% 50%);
 `
 
@@ -56,4 +56,4 @@ const Filters = styled.div`
   display: flex;
   justify-content: flex-start;
 `
-export {Filter, FiltersContainer, FilterContent, FilterExit, FilterClear, Filters}
+export { Filter, FiltersContainer, FilterContent, FilterExit, FilterClear, Filters }

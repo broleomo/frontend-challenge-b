@@ -12,7 +12,7 @@ import {
   JobDescriptor, 
   JobTags} from './JobItem.styles';
 
-const JobItem= ({company, image, title, datePosted, contract, location, featured, newJob, role, level, languages, tools, addFilter, descriptors }) => {
+const JobItem = ({company, image, title, datePosted, contract, location, featured, newJob, role, level, languages, tools, addFilter, descriptors }) => {
   return (
     <>
       <Card featured={featured}>
