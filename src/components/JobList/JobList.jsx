@@ -1,18 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import JobItem from '../JobItem/JobItem';
-import {FiltersContainer, Filter, ListContainer, FilterContent, FilterExit} from './JobList.styles';
+import {ListContainer, Wrapper} from './JobList.styles';
+import FilterBar from '../FilterBar/FilterBar';
 
 const JobList = ({jobs}) => {
+  const [filters, setFilters] = useState([]);
+  const addFilter = (filter) => !filters?.includes(filter) && setFilters([...filters, filter]);
+  const removeFilter = (filterToRemove) => setFilters(filters?.filter((filter) => filterToRemove !== filter));
+  let filteredJobs = [...jobs];
+  if (filters.length > 0) {
+    filteredJobs = filteredJobs.filter((job) => {
+      const fail = filters.map((filter) => (
+          // Return whether the selected filter is in the descriptors array (returning a true value)
+          job.descriptors.includes(filter)
+        ))
+        // filter out any array that included a false value
+        // this is because the filter is an AND filter not an OR filter
+        .includes(false);
+      return !fail ? job : null;
+    });
+  }
+
   return (
-    <>
-    <FiltersContainer>
-      <Filter>
-        <FilterContent>Filter</FilterContent>
-        <FilterExit>X</FilterExit>
-      </Filter>
-    </FiltersContainer>
+    <Wrapper>
+    {filters?.length > 0 && <FilterBar filters={filters} removeFilter={removeFilter} clearFilters={() => setFilters([])} />}
     <ListContainer>
-    {jobs.map((job) => (
+    {filteredJobs.map((job) => (
       <JobItem
         key={job.id}
         company={job.company} 
@@ -27,10 +40,12 @@ const JobList = ({jobs}) => {
         level={job.level}
         languages={job.languages}
         tools={job.tools}
+        addFilter={addFilter}
+        descriptors={job.descriptors}
       />
     ))}
     </ListContainer>
-    </>
+    </Wrapper>
 )}
 
 export default JobList;

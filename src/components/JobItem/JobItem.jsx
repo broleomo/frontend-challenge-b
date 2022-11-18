@@ -1,7 +1,18 @@
 import React from 'react';
-import {Card, JobImage, JobInfoContainer, JobTitle, JobTitleContainer, JobTag, JobPostInfo, CompanyTitle, JobDescriptionTagContainer, JobDescriptor, JobTags} from './JobItem.styles';
+import {
+  Card, 
+  JobImage, 
+  JobInfoContainer, 
+  JobTitle, 
+  JobTitleContainer, 
+  JobTag, 
+  JobPostInfo, 
+  CompanyTitle, 
+  JobDescriptionTagContainer, 
+  JobDescriptor, 
+  JobTags} from './JobItem.styles';
 
-const JobItem= ({company, image, title, datePosted, contract, location, featured, newJob, role, level, languages, tools }) => {
+const JobItem= ({company, image, title, datePosted, contract, location, featured, newJob, role, level, languages, tools, addFilter, descriptors }) => {
   return (
     <>
       <Card featured={featured}>
@@ -18,10 +29,7 @@ const JobItem= ({company, image, title, datePosted, contract, location, featured
           <JobPostInfo>{datePosted} &#183; {contract} &#183; {location}</JobPostInfo>
         </JobInfoContainer>
         <JobDescriptionTagContainer>
-          <JobDescriptor>{role}</JobDescriptor>
-          <JobDescriptor>{level}</JobDescriptor>
-          {languages.map(language => (<JobDescriptor>{language}</JobDescriptor>))}
-          {tools.map(tool => (<JobDescriptor>{tool}</JobDescriptor>))}
+          {descriptors.map(descriptor => <JobDescriptor key={descriptor} onClick={() => addFilter(descriptor)}>{descriptor}</JobDescriptor>)}
         </JobDescriptionTagContainer>
       </Card>
     </>

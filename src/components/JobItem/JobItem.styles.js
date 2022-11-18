@@ -9,6 +9,7 @@ const Card = styled.div`
   font-family: 'League Spartan', sans-serif;
   justify-content: center;
   box-shadow: 0px 0px 17px hsl(180deg 29% 50%);
+  min-width: 900px;
   border-left: ${props => props.featured ? "5px solid hsl(180, 29%, 50%)" : "white"};
 `
 
@@ -53,6 +54,11 @@ const JobTitle = styled.p`
   font-weight: bold;
   font-size: 18px;
   margin: 5px 0;
+  cursor: pointer;
+
+  &:hover {
+    color: hsl(180, 29%, 50%);
+  }
 `
 
 const JobPostInfo = styled.div`
@@ -76,6 +82,11 @@ const JobDescriptor = styled.button`
   margin: 0 5px;
   border: 0;
   cursor: pointer;
+
+  &:hover {
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+  }
 `
 
 const JobTags = styled.div`
