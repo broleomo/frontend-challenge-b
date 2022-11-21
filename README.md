@@ -35,6 +35,7 @@ Users should be able to:
 - [Styled Components](https://styled-components.com/) - For styles
 
 ### Running the project
+- Git clone this project repo.
 - To set up the application move to the project directory and run `npm i`
 - To run the application run `npm start`
 - You should see the application running on http://localhost:3000/
