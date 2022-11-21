@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
 const ListContainer = styled.div`
-  display: flex;
   align-items: center;
-  margin-top: 40px;
+  display: flex;
   flex-direction: column;
+  margin-top: 40px;
 `
 
 const Wrapper = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 `
 
 

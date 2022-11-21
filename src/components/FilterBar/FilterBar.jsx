@@ -1,7 +1,8 @@
 import React from 'react';
-import {Filter, Filters, FiltersContainer, FilterContent, FilterExit, FilterClear} from './FilterBar.styles';
+import PropTypes from 'prop-types';
+import { Filter, Filters, FiltersContainer, FilterContent, FilterExit, FilterClear } from './FilterBar.styles';
 
-const FilterBar = ({filters, removeFilter, clearFilters}) => {
+const FilterBar = ({ filters, removeFilter, clearFilters }) => {
   return (
     <>
       <FiltersContainer>
@@ -17,5 +18,11 @@ const FilterBar = ({filters, removeFilter, clearFilters}) => {
       </FiltersContainer>
     </>
 )}
+
+FilterBar.propTypes = {
+  filters: PropTypes.array,
+  removeFilter: PropTypes.func,
+  clearFilters: PropTypes.func
+}
 
 export default FilterBar;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Card,
   ImageContainer, 
@@ -11,7 +12,7 @@ import {
   CompanyTitle, 
   JobDescriptionTagContainer, 
   JobDescriptor, 
-  JobTags} from './JobItem.styles';
+  JobTags } from './JobItem.styles';
 
 const JobItem = ({ company, image, title, datePosted, contract, location, featured, newJob, addFilter, descriptors }) => {
   return (
@@ -39,5 +40,18 @@ const JobItem = ({ company, image, title, datePosted, contract, location, featur
       </Card>
     </>
 )}
+
+JobItem.propTypes = {
+  company: PropTypes.string,
+  image: PropTypes.string,
+  title: PropTypes.string,
+  datePosted: PropTypes.string,
+  contract: PropTypes.string,
+  location: PropTypes.string,
+  featured: PropTypes.bool,
+  newJob: PropTypes.bool,
+  addFilter: PropTypes.func,
+  descriptors: PropTypes.array
+}
 
 export default JobItem;

@@ -2,54 +2,54 @@ import styled from 'styled-components';
 
 const FiltersContainer = styled.div`
   background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 17px hsl(180deg 29% 50%);
   display: flex;
   font-family: 'League Spartan', sans-serif;
   justify-content: space-between;
-  width: 300px;
   padding: 10px;
-  border-radius: 5px;
   position: absolute;
   top: 110px;
-  box-shadow: 0px 0px 17px hsl(180deg 29% 50%);
+  width: 300px;
 
   @media screen and (min-width: 600px) {
     width: calc(100% - 100px);
   }
 
   @media screen and (min-width: 900px) {
-  top: 130px;
-  padding: 20px 30px;
-  max-width: 900px;
+    max-width: 900px;
+    padding: 20px 30px;
+    top: 130px;
   }
 
   @media screen and (min-width: 1300px) {
-    top: 150px;
     padding: 20px 30px;
+    top: 150px;
     }
 `
 
 const Filter = styled.div`
-  color: hsl(180, 29%, 50%);
   background-color: hsl(180, 52%, 96%);
-  display: flex;
   border-radius: 5px;
-  margin: 5px;
+  color: hsl(180, 29%, 50%);
+  display: flex;
   font-size: 14px;
+  margin: 5px;
 
   @media screen and (min-width: 1000px) {
     margin: 0 25px;
-    }
+  }
 `
 
 const FilterExit = styled.button`
-  border: 0;
-  padding: 0 10px;
   background-color: hsl(180, 29%, 50%);
+  border: 0;
   border-radius: 0px 4px 4px 0px;
   color: white;
   cursor: pointer;
   font-size: 15px;
   font-weight: bold;
+  padding: 0 10px;
 
   &:hover {
     background-color: hsl(180, 14%, 20%);
@@ -57,8 +57,8 @@ const FilterExit = styled.button`
 `
 
 const FilterClear = styled.button`
-  border: 0;
   background: none;
+  border: 0;
   color: hsl(180, 29%, 50%);
   cursor: pointer;
   font-family: 'League Spartan', sans-serif;
@@ -74,7 +74,7 @@ const FilterContent = styled.p`
 
 const Filters = styled.div`
   display: flex;
-  justify-content: flex-start;
   flex-wrap: wrap;
+  justify-content: flex-start;
 `
 export { Filter, FiltersContainer, FilterContent, FilterExit, FilterClear, Filters }
