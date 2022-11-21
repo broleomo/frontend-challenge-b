@@ -8,7 +8,7 @@ This is a solution to the Mailgun Frontend Challenge
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
 - [Useful resources](#useful-resources)
-- [Author](#Brooklynn Moor)
+- [Author](#author)
 
 
 ## Overview
