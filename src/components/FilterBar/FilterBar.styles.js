@@ -23,7 +23,6 @@ const FiltersContainer = styled.div`
   }
 
   @media screen and (min-width: 1300px) {
-    padding: 20px 30px;
     top: 150px;
     }
 `
