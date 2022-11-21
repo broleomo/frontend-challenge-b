@@ -5,14 +5,18 @@ const FiltersContainer = styled.div`
   display: flex;
   font-family: 'League Spartan', sans-serif;
   justify-content: space-between;
-  width: calc(100% - 100px);
+  width: 300px;
   padding: 10px;
   border-radius: 5px;
   position: absolute;
   top: 110px;
   box-shadow: 0px 0px 17px hsl(180deg 29% 50%);
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 600px) {
+    width: calc(100% - 100px);
+  }
+
+  @media screen and (min-width: 900px) {
   top: 130px;
   padding: 20px 30px;
   max-width: 900px;

@@ -7,14 +7,16 @@ const Card = styled.div`
   padding: 30px;
   border-radius: 5px;
   font-family: 'League Spartan', sans-serif;
-  justify-content: center;
+  justify-content: flex-start;
   box-shadow: 0px 0px 17px hsl(180deg 29% 50%);
   border-left: ${props => props.featured ? "5px solid hsl(180, 29%, 50%)" : "white"};
-  width: calc(100% - 100px);
   flex-direction: column;
+  width: 300px;
 
   @media screen and (min-width: 700px) {
     flex-direction: row;
+    width: calc(100% - 100px);
+    max-width: 900px;
     }
 `
 
@@ -25,8 +27,8 @@ const JobInfoContainer = styled.div`
   margin: 10px;
   
 
-  @media screen and (min-width: 900px) {
-    margin: 0 300px 0 10px;
+  @media screen and (min-width: 800px) {
+    margin: 0 250px 0 10px;
     }
 `
 
@@ -90,13 +92,20 @@ const JobPostInfo = styled.div`
 
   @media screen and (min-width: 800px) {
     flex-direction: row;
+    border-bottom: 0;
     }
 `
 
 const JobDescriptionTagContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 800px) {
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    }
 `
 
 const JobDescriptor = styled.button`
@@ -105,7 +114,7 @@ const JobDescriptor = styled.button`
   padding: 5px;
   border-radius: 5px;
   background-color: hsl(180, 52%, 96%);
-  margin: 0 5px;
+  margin: 5px;
   border: 0;
   cursor: pointer;
 
