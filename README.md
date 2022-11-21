@@ -7,6 +7,7 @@ This is a solution to the Mailgun Frontend Challenge
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
+  - [Running The Project](#running-the-project)
 - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -33,12 +34,16 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 - [Styled Components](https://styled-components.com/) - For styles
 
+### Running the project
+- To set up the application move to the project directory and run `npm i`
+- To run the application run `npm start`
+- You should see the application running on http://localhost:3000/
+
 
 ### Continued development
 
 - If given more time, I would have hosted this application somewhere like Github Pages. 
 - I'd have added some unit testing with something like Jest or React Testing Library.
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
