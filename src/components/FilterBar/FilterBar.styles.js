@@ -5,12 +5,23 @@ const FiltersContainer = styled.div`
   display: flex;
   font-family: 'League Spartan', sans-serif;
   justify-content: space-between;
-  min-width: 900px;
-  padding: 20px 30px;
+  width: calc(100% - 100px);
+  padding: 10px;
   border-radius: 5px;
   position: absolute;
-  top: 156px;
+  top: 110px;
   box-shadow: 0px 0px 17px hsl(180deg 29% 50%);
+
+  @media screen and (min-width: 1000px) {
+  top: 130px;
+  padding: 20px 30px;
+  max-width: 900px;
+  }
+
+  @media screen and (min-width: 1300px) {
+    top: 150px;
+    padding: 20px 30px;
+    }
 `
 
 const Filter = styled.div`
@@ -18,7 +29,12 @@ const Filter = styled.div`
   background-color: hsl(180, 52%, 96%);
   display: flex;
   border-radius: 5px;
-  margin: 0 25px;
+  margin: 5px;
+  font-size: 14px;
+
+  @media screen and (min-width: 1000px) {
+    margin: 0 25px;
+    }
 `
 
 const FilterExit = styled.button`
@@ -55,5 +71,6 @@ const FilterContent = styled.p`
 const Filters = styled.div`
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 `
 export { Filter, FiltersContainer, FilterContent, FilterExit, FilterClear, Filters }

@@ -6,8 +6,8 @@ const Container = (props) => {
 
   return (
     <>
-      <Header/>
       <Wrapper>
+      <Header/>
         {props.children}
       </Wrapper>
   </>

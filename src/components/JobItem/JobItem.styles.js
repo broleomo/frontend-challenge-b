@@ -3,21 +3,31 @@ import styled from 'styled-components';
 const Card = styled.div`
   background-color: white;
   display: flex;
-  margin: 10px;
+  margin: 40px 10px 10px 10px;
   padding: 30px;
   border-radius: 5px;
   font-family: 'League Spartan', sans-serif;
   justify-content: center;
   box-shadow: 0px 0px 17px hsl(180deg 29% 50%);
-  min-width: 900px;
   border-left: ${props => props.featured ? "5px solid hsl(180, 29%, 50%)" : "white"};
+  width: calc(100% - 100px);
+  flex-direction: column;
+
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+    }
 `
 
 const JobInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 300px 0 10px;
+  margin: 10px;
+  
+
+  @media screen and (min-width: 900px) {
+    margin: 0 300px 0 10px;
+    }
 `
 
 const CompanyTitle = styled.p`
@@ -46,7 +56,15 @@ const JobTag = styled.div`
 `
 
 const JobImage = styled.img`
-  border-radius: 50%;
+  width: 18%;
+  position: relative;
+  bottom: 44px;
+
+  @media screen and (min-width: 700px) {
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    }
 `
 
 const JobTitle = styled.p`
@@ -64,12 +82,20 @@ const JobTitle = styled.p`
 const JobPostInfo = styled.div`
   color: gray;
   font-weight: 100;
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(180, 31%, 95%);
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
+    }
 `
 
 const JobDescriptionTagContainer = styled.div`
   display: flex;
   align-items: center;
-  width: 300px;
   justify-content: space-around;
 `
 
@@ -93,4 +119,8 @@ const JobTags = styled.div`
   display: flex;
 `
 
-export {Card, JobInfoContainer, JobImage, JobTag, JobPostInfo, JobTitle, CompanyTitle, JobTitleContainer, JobDescriptionTagContainer, JobDescriptor, JobTags};
+const ImageContainer = styled.div`
+  height: 15px;
+`
+
+export {Card, JobInfoContainer, JobImage, JobTag, JobPostInfo, JobTitle, CompanyTitle, JobTitleContainer, JobDescriptionTagContainer, JobDescriptor, JobTags, ImageContainer};

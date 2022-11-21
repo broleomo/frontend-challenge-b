@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-  Card, 
+  Card,
+  ImageContainer, 
   JobImage, 
   JobInfoContainer, 
   JobTitle, 
@@ -12,11 +13,11 @@ import {
   JobDescriptor, 
   JobTags} from './JobItem.styles';
 
-const JobItem = ({company, image, title, datePosted, contract, location, featured, newJob, role, level, languages, tools, addFilter, descriptors }) => {
+const JobItem = ({ company, image, title, datePosted, contract, location, featured, newJob, addFilter, descriptors }) => {
   return (
     <>
       <Card featured={featured}>
-        <JobImage src={image} alt={`${company} logo`} />
+        <ImageContainer className="test"><JobImage src={image} alt={`${company} logo`} /></ImageContainer>
         <JobInfoContainer>
           <JobTitleContainer>
             <CompanyTitle>{company}</CompanyTitle>
@@ -26,7 +27,11 @@ const JobItem = ({company, image, title, datePosted, contract, location, feature
             </JobTags>
           </JobTitleContainer>
           <JobTitle>{title}</JobTitle>
-          <JobPostInfo>{datePosted} &#183; {contract} &#183; {location}</JobPostInfo>
+          <JobPostInfo>
+            <p>{datePosted} &#183;</p> 
+            <p>{contract} &#183; </p> 
+            <p>{location}</p>
+          </JobPostInfo>
         </JobInfoContainer>
         <JobDescriptionTagContainer>
           {descriptors.map(descriptor => <JobDescriptor key={descriptor} onClick={() => addFilter(descriptor)}>{descriptor}</JobDescriptor>)}
